@@ -5,49 +5,29 @@
  * @format
  * @flow
  */
-
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import React from 'react'
 import Main from './pages/Main';
-import Login from './pages/Login';
-import RequestList from './pages/RequestList';
-import NewRequest from './pages/NewRequest';
-import EditUser from './pages/EditUser';
+import RequestList from './pages/RequestList'
+import NewRequest from './pages/NewRequest'
+import EditUser from './pages/EditUser'
+import Distributors from './pages/Distributors'
 
-import { createAppContainer } from 'react-navigation';
-import { createDrawerNavigator } from 'react-navigation-drawer';
+import { createAppContainer } from 'react-navigation'
+import { createDrawerNavigator } from 'react-navigation-drawer'
+import DrawerContent from './components/DrawerContent'
+import { Icon } from 'react-native-elements'
+import { COLORS } from '../styles'
 
 const MainNavigator = createDrawerNavigator({
-  Home : { screen : Main, title : 'Home' },
-  Login : { screen : Login  },
-  EditUser : { screen : EditUser, navigationOptions: () => ({ title : 'Meus dados'}) },
-  NewRequest : { screen : NewRequest, navigationOptions: () => ({ title : 'Novo pedido' }) },
-  RequestList : { screen : RequestList, navigationOptions: () => ({ title : 'Pedidos' }) } 
+  Home : { screen : Main, navigationOptions: () => ({ drawerLabel: () => null }) },
+  NewRequest : { screen : NewRequest, navigationOptions: () => ({ title : 'Novo pedido', drawerIcon : <Icon type="material-community" name="phone-plus" size={20} color={COLORS.PRIMARY} /> }) },
+  RequestList : { screen : RequestList, navigationOptions: () => ({ title : 'Meus pedidos', drawerIcon : <Icon type="material" name="list" size={20} color={COLORS.PRIMARY} /> }) },
+  Distributors : { screen : Distributors, navigationOptions: () => ({ title : 'Encontrar distribuidor', drawerIcon : <Icon type="font-awesome" name="search" size={20} color={COLORS.PRIMARY} /> }) },
+  EditUser : { screen : EditUser, navigationOptions: () => ({ title : 'Meus dados', drawerIcon : <Icon type="font-awesome" name="address-card-o" size={20} color={COLORS.PRIMARY} /> }) }
+}, {
+  contentComponent : DrawerContent
 });
 
-const App = createAppContainer(MainNavigator);
-
-
-// const App: () => React$Node = () => {
-//   return (
-//     <View style={styles.container}>
-//       <NativeRouter>
-//         <View style={styles.container}>
-//           <Route exact path="/" component={Main} />
-//           <Route exact path="/login" component={Login} />
-//           <Route exact path="/edit-user" component={EditUser} />
-//           <Route exact path="/request-list" component={RequestList} />
-//           <Route exact path="/new-request" component={NewRequest} /> 
-//         </View>
-//       </NativeRouter>
-//     </View>
-//   );
-// };
-
-const styles = StyleSheet.create({
-  container: {
-    flex : 1
-  }
-});
+const App = createAppContainer(MainNavigator)
 
 export default App;
