@@ -4,5 +4,6 @@ export const COLORS = {
   GRAY : '#BCBCBC',
   LIGHT_GRAY : '#DEDEDE',
   DARK_GRAY: '#666666',
-  WHITE : '#FFFFFF'
+  WHITE : '#FFFFFF',
+  SUCCESS : '#44ad45'
 }

@@ -69,9 +69,9 @@ const Main = (props) => {
           type='clear'
           onPress={() => props.navigation.dispatch(DrawerActions.toggleDrawer())} />
       </View>
-      <TouchableOpacity style={styles.touchableOpacity}>
+      {/* <TouchableOpacity style={styles.touchableOpacity}>
         <Button buttonStyle={styles.actionButton} icon={<Icon type='material' name='add' color={COLORS.WHITE} size={35} />} onPress={() => props.navigation.navigate('NewRequest')} />
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </View>
   )
 }
