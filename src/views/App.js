@@ -6,11 +6,14 @@
  * @flow
  */
 import React from 'react'
-import Main from './pages/Main';
-import RequestList from './pages/RequestList'
-import NewRequest from './pages/NewRequest'
-import EditUser from './pages/EditUser'
-import Distributors from './pages/Distributors'
+import {
+  Main,
+  RequestList,
+  NewRequest,
+  EditUser,
+  Distributors,
+  FinishRequest
+} from './pages';
 
 import { createAppContainer } from 'react-navigation'
 import { createDrawerNavigator } from 'react-navigation-drawer'
@@ -23,7 +26,8 @@ const MainNavigator = createDrawerNavigator({
   NewRequest : { screen : NewRequest, navigationOptions: () => ({ title : 'Novo pedido', drawerIcon : <Icon type="material-community" name="phone-plus" size={20} color={COLORS.PRIMARY} /> }) },
   RequestList : { screen : RequestList, navigationOptions: () => ({ title : 'Meus pedidos', drawerIcon : <Icon type="material" name="list" size={20} color={COLORS.PRIMARY} /> }) },
   Distributors : { screen : Distributors, navigationOptions: () => ({ title : 'Encontrar distribuidor', drawerIcon : <Icon type="font-awesome" name="search" size={20} color={COLORS.PRIMARY} /> }) },
-  EditUser : { screen : EditUser, navigationOptions: () => ({ title : 'Meus dados', drawerIcon : <Icon type="font-awesome" name="address-card-o" size={20} color={COLORS.PRIMARY} /> }) }
+  EditUser : { screen : EditUser, navigationOptions: () => ({ title : 'Meus dados', drawerIcon : <Icon type="font-awesome" name="address-card-o" size={20} color={COLORS.PRIMARY} /> }) },
+  FinishRequest : { screen : FinishRequest, navigationOptions: () => ({ drawerLabel: () => null }) }
 }, {
   contentComponent : DrawerContent
 });
