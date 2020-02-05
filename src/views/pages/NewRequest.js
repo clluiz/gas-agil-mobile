@@ -108,7 +108,7 @@ export default (props) => {
 
   return (
     <View style={{ flex: 1 }}>
-      <View style={{ flex: 0.9 }}>
+      <View style={{ flex: 0.85 }}>
         <PageHeader navigation={props.navigation} />
         <View style={styles.container}>
           <View>
@@ -131,7 +131,7 @@ export default (props) => {
             </View>}
         />
       </View>
-      <View style={{ flex: 0.1, alignItems: 'center' }}>
+      <View style={{ flex: 0.15, alignItems: 'center' }}>
         <Button buttonStyle={styles.confirmButton} title={`Finalizar ${valueOfRequest ? `R$${valueOfRequest}` : ''}`}></Button>
       </View>
     </View>
