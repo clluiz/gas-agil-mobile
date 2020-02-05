@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   View,
   Text,
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   },
   confirmButton: {
     height: 50,
-    width: 200,
+    width: 300,
     backgroundColor: '#0558fc'
   }
 })
@@ -88,6 +88,13 @@ const styles = StyleSheet.create({
 export default (props) => {
 
   const [products, setProducts] = useState(prods)
+  const [valueOfRequest, setValueOfRequest] = useState(0)
+
+  useEffect(() => {
+    const total = products.reduce(
+      (accumulator, product) => accumulator + (product.count * product.preco), 0)
+    setValueOfRequest(total)
+  }, [products]);
 
   function addProduct(productIndex) {
     const newProducts = [...products]
@@ -125,7 +132,7 @@ export default (props) => {
         />
       </View>
       <View style={{ flex: 0.1, alignItems: 'center' }}>
-        <Button buttonStyle={styles.confirmButton} title="Finalizar pedido"></Button>
+        <Button buttonStyle={styles.confirmButton} title={`Finalizar ${valueOfRequest ? `R$${valueOfRequest}` : ''}`}></Button>
       </View>
     </View>
   )
