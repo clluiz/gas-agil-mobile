@@ -133,7 +133,7 @@ export default (props) => {
         />
       </View>
       <View style={{ flex: 0.15, alignItems: 'center' }}>
-        <Button disabled={valueOfRequest === 0} onPress={() => navigation.navigate('FinishRequest', { requestValue: valueOfRequest})} buttonStyle={styles.confirmButton} title={`Finalizar ${valueOfRequest ? `R$${valueOfRequest}` : ''}`}></Button>
+        <Button disabled={valueOfRequest === 0} onPress={() => navigation.navigate('FinishRequest', { requestValue: valueOfRequest})} buttonStyle={styles.confirmButton} title={`Próximo ${valueOfRequest ? `R$${valueOfRequest}` : ''}`}></Button>
       </View>
     </View>
   )
