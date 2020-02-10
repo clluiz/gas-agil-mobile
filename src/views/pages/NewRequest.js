@@ -106,6 +106,7 @@ export default (props) => {
     setProducts(newProducts.map((p, i) => i === productIndex && p.count > 0 ? { ...p, count: p.count - 1 } : p))
   }
 
+  const { navigation } = props;
   return (
     <View style={{ flex: 1 }}>
       <View style={{ flex: 0.85 }}>
@@ -132,7 +133,7 @@ export default (props) => {
         />
       </View>
       <View style={{ flex: 0.15, alignItems: 'center' }}>
-        <Button buttonStyle={styles.confirmButton} title={`Finalizar ${valueOfRequest ? `R$${valueOfRequest}` : ''}`}></Button>
+        <Button disabled={valueOfRequest === 0} onPress={() => navigation.navigate('FinishRequest', { requestValue: valueOfRequest})} buttonStyle={styles.confirmButton} title={`Finalizar ${valueOfRequest ? `R$${valueOfRequest}` : ''}`}></Button>
       </View>
     </View>
   )

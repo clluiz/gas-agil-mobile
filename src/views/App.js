@@ -29,7 +29,8 @@ const MainNavigator = createDrawerNavigator({
   EditUser : { screen : EditUser, navigationOptions: () => ({ title : 'Meus dados', drawerIcon : <Icon type="font-awesome" name="address-card-o" size={20} color={COLORS.PRIMARY} /> }) },
   FinishRequest : { screen : FinishRequest, navigationOptions: () => ({ drawerLabel: () => null }) }
 }, {
-  contentComponent : DrawerContent
+  contentComponent : DrawerContent,
+  backBehavior : 'history'
 });
 
 const App = createAppContainer(MainNavigator)
