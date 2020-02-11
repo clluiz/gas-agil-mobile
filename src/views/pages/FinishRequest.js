@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   finishButton: {
     height: 50,
     width: 150,
-    backgroundColor: COLORS.SUCCESS
+    backgroundColor: COLORS.CONFIRM
   },
   paymentMethod: {
     fontSize: 20,

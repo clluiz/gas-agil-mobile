@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   confirmButton: {
     height: 50,
     width: 300,
-    backgroundColor: '#0558fc'
+    backgroundColor: COLORS.CONFIRM
   }
 })
 
