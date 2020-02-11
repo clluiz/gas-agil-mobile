@@ -17,42 +17,42 @@ const prods = [{
   descricao: 'Botijão 13KG',
   preco: 70.00,
   codigo: 1,
-  count: 0
+  quantidade: 0
 }, {
   descricao: 'Galão de água',
   preco: 10.00,
   codigo: 29,
-  count: 0
+  quantidade: 0
 }, {
   descricao: 'Botijão 13KG',
   preco: 70.00,
   codigo: 17,
-  count: 0
+  quantidade: 0
 }, {
   descricao: 'Galão de água',
   preco: 10.00,
   codigo: 26,
-  count: 0
+  quantidade: 0
 }, {
   descricao: 'Botijão 13KG',
   preco: 70.00,
   codigo: 13,
-  count: 0
+  quantidade: 0
 }, {
   descricao: 'Galão de água',
   preco: 10.00,
   codigo: 22,
-  count: 0
+  quantidade: 0
 }, {
   descricao: 'Botijão 13KG',
   preco: 70.00,
   codigo: 11,
-  count: 0
+  quantidade: 0
 }, {
   descricao: 'Galão de água',
   preco: 10.00,
   codigo: 21,
-  count: 0
+  quantidade: 0
 }]
 
 const styles = StyleSheet.create({
@@ -92,18 +92,18 @@ export default (props) => {
 
   useEffect(() => {
     const total = products.reduce(
-      (accumulator, product) => accumulator + (product.count * product.preco), 0)
+      (accumulator, product) => accumulator + (product.quantidade * product.preco), 0)
     setValueOfRequest(total)
   }, [products]);
 
   function addProduct(productIndex) {
     const newProducts = [...products]
-    setProducts(newProducts.map((p, i) => i === productIndex ? { ...p, count: p.count + 1 } : p))
+    setProducts(newProducts.map((p, i) => i === productIndex ? { ...p, quantidade: p.quantidade + 1 } : p))
   }
 
   function removeProduct(productIndex) {
     const newProducts = [...products]
-    setProducts(newProducts.map((p, i) => i === productIndex && p.count > 0 ? { ...p, count: p.count - 1 } : p))
+    setProducts(newProducts.map((p, i) => i === productIndex && p.quantidade > 0 ? { ...p, quantidade: p.quantidade - 1 } : p))
   }
 
   const { navigation } = props;
@@ -128,12 +128,17 @@ export default (props) => {
             <View style={styles.stepper}>
               <Text style={styles.description}>R${item.preco}</Text>
               <Text style={styles.description}>{item.descricao}</Text>
-              <NumericStepper count={item.count || 0} add={() => addProduct(index)} remove={() => removeProduct(index)} />
+              <NumericStepper count={item.quantidade || 0} add={() => addProduct(index)} remove={() => removeProduct(index)} />
             </View>}
         />
       </View>
       <View style={{ flex: 0.15, alignItems: 'center' }}>
-        <Button disabled={valueOfRequest === 0} onPress={() => navigation.navigate('FinishRequest', { requestValue: valueOfRequest})} buttonStyle={styles.confirmButton} title={`Próximo ${valueOfRequest ? `R$${valueOfRequest}` : ''}`}></Button>
+        <Button 
+          disabled={valueOfRequest === 0} 
+          onPress={() => navigation.navigate('FinishRequest', { requestValue: valueOfRequest, selectedProducts : products.filter(p => p.quantidade > 0)})} 
+          buttonStyle={styles.confirmButton} 
+          title={`Próximo ${valueOfRequest ? `R$${valueOfRequest}` : ''}`} 
+        />
       </View>
     </View>
   )
