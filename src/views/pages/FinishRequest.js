@@ -13,6 +13,7 @@ import { COLORS } from '../../styles'
 import {
   ButtonGroup
 } from 'react-native-elements'
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 const styles = StyleSheet.create({
   title: {
@@ -62,7 +63,7 @@ export default ({ navigation }) => {
   const [paymentMethod, setPaymentMethod] = useState(MONEY);
 
   return (
-    <View style={{flex:1}}>
+    <View style={{ flex: 1 }}>
       <PageHeader navigation={navigation} />
       <View style={styles.container}>
         <Text style={styles.title}>Resumo</Text>
@@ -78,7 +79,7 @@ export default ({ navigation }) => {
           }
         />
       </View>
-      <View style={{ flex: 2, alignItems : 'center' }}>
+      <View style={{ flex: 2, alignItems: 'center' }}>
         <Text style={styles.value}>Total: R$ {params.requestValue.toFixed(2)}</Text>
         <Text style={styles.paymentMethod}>Pagar com:</Text>
         <ButtonGroup
@@ -89,6 +90,17 @@ export default ({ navigation }) => {
           selectedIndex={paymentMethod}
           buttons={['Dinheiro', 'Cartão']}
         />
+      </View>
+      <View style={{ flex: 2, alignItems: 'center', justifyContent: 'space-around', flexDirection: 'row' }}>
+        <Icon
+          name='map-marker'
+          color={COLORS.PRIMARY}
+          size={40}
+        />
+        <View>
+          <Text>Endereço de entrega:</Text>
+          <Text>Rua Geraldo Ribeiro, 345, Parque Bocaina</Text>
+        </View>
       </View>
       <View style={{ flex: 1, alignItems: 'center' }}>
         <Button buttonStyle={styles.finishButton} title="Finalizar pedido"></Button>
