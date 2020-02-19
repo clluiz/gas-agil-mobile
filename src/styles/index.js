@@ -5,6 +5,7 @@ export const COLORS = {
   LIGHT_GRAY : '#DEDEDE',
   DARK_GRAY: '#666666',
   WHITE : '#FFFFFF',
-  SUCCESS : '#44ad45',
-  CONFIRM: '#0558fc'
+  SUCCESS : '#99C24D',
+  CONFIRM: '#006E90',
+  ERROR: '#D72638'
 }
