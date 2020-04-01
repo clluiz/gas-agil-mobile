@@ -11,20 +11,20 @@ import {
 import { COLORS } from '../../styles';
 
 const styles = StyleSheet.create({
-  container : {
+  container: {
     height: 70,
-    flexDirection : 'row',
-    justifyContent : 'space-evenly',
-    alignItems : 'center',
-    color : COLORS.PRIMARY
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    color: COLORS.PRIMARY
   },
-  icon : {
-    marginHorizontal : 20,
-    color : COLORS.PRIMARY
+  icon: {
+    marginHorizontal: 20,
+    color: COLORS.PRIMARY
   },
-  description : {
-    fontSize : 20,
-    color : COLORS.PRIMARY
+  description: {
+    fontSize: 20,
+    color: COLORS.PRIMARY
   }
 })
 
@@ -35,23 +35,23 @@ export default (props) => {
       <Button
         type='clear'
         onPress={remove}
-        icon={<Icon 
-          name="minus" 
-          size={20} 
-          style={styles.icon} 
+        icon={<Icon
+          name="minus"
+          size={20}
+          style={styles.icon}
           onPress={remove} />}
-      />      
+      />
       <Text style={styles.description}>{count}</Text>
       <Button
         type='clear'
         onPress={add}
-        icon={<Icon 
-          name="plus" 
-          size={20} 
-          style={styles.icon} 
-          onPress={add} 
+        icon={<Icon
+          name="plus"
+          size={20}
+          style={styles.icon}
+          onPress={add}
         />}
-    />      
+      />
     </View>
   )
 }
