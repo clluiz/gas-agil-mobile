@@ -11,14 +11,14 @@ import {
 import {
   MaskedTextInput,
   TextInput
-} from '../components/inputs'
+} from '../components/Inputs'
 import {
   COLORS
 } from '../../styles'
 import {
   Button
 } from 'react-native-elements'
-import KeyboardShift from '../components/KeyboardShift';
+import KeyboardShift from '../components/KeyboardShift'
 
 const styles = StyleSheet.create({
   form: {
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     color: COLORS.PRIMARY
   }
-});
+})
 
 export default (props) => {
 

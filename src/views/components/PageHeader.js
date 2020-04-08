@@ -7,7 +7,7 @@ import {
   Button 
 } from 'react-native-elements'
 import Icon from 'react-native-vector-icons/FontAwesome'
-import { COLORS } from '../../styles';
+import { COLORS } from '../../styles'
 
 const styles = StyleSheet.create({
   containerStyle : {
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
 })
 
 export default (props) => {
-  const { navigation } = props;
+  const { navigation } = props
   return (
     <Header 
       containerStyle={styles.containerStyle}

@@ -7,8 +7,8 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome'
 import {
   Button
-} from 'react-native-elements';
-import { COLORS } from '../../styles';
+} from 'react-native-elements'
+import { COLORS } from '../../styles'
 
 const styles = StyleSheet.create({
   container: {
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
 })
 
 export default (props) => {
-  const { count, add, remove } = props;
+  const { count, add, remove } = props
   return (
     <View style={styles.container}>
       <Button

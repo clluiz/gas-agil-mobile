@@ -55,12 +55,12 @@ const styles = StyleSheet.create({
   }
 })
 
-const MONEY = 0;
-const CARD = 1;
+const MONEY = 0
+const CARD = 1
 
 export default ({ navigation }) => {
   const { state: { params } } = navigation
-  const [paymentMethod, setPaymentMethod] = useState(MONEY);
+  const [paymentMethod, setPaymentMethod] = useState(MONEY)
 
   return (
     <View style={{ flex: 1 }}>

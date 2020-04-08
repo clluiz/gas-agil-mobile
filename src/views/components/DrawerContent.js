@@ -17,7 +17,7 @@ import {
 } from 'react-native-elements'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import SafeAreaView from 'react-native-safe-area-view'
-import { COLORS } from '../../styles';
+import { COLORS } from '../../styles'
 
 const styles = StyleSheet.create({
   pictureContainer: {
@@ -40,19 +40,19 @@ const styles = StyleSheet.create({
   userName : {
     color : COLORS.DARK_GRAY
   }
-});
+})
 
 export default class DrawerContent extends Component {
 
   constructor(props) {
-    super(props);
+    super(props)
   }
 
   navigateToScreen = (route) => () => {
     const navigateAction = NavigationActions.navigate({
       routeName: route
-    });
-    this.props.navigation.dispatch(navigateAction);
+    })
+    this.props.navigation.dispatch(navigateAction)
   }
 
   render() {

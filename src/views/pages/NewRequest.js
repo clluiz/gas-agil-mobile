@@ -94,7 +94,7 @@ export default (props) => {
     const total = products.reduce(
       (accumulator, product) => accumulator + (product.quantidade * product.preco), 0)
     setValueOfRequest(total)
-  }, [products]);
+  }, [products])
 
   function addProduct(productIndex) {
     const newProducts = [...products]
@@ -106,7 +106,7 @@ export default (props) => {
     setProducts(newProducts.map((p, i) => i === productIndex && p.quantidade > 0 ? { ...p, quantidade: p.quantidade - 1 } : p))
   }
 
-  const { navigation } = props;
+  const { navigation } = props
   return (
     <View style={{ flex: 1 }}>
       <View style={{ flex: 0.85 }}>

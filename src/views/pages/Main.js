@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import MapView from "react-native-maps";
-import Geolocation from '@react-native-community/geolocation';
+import React, { useEffect, useState } from 'react'
+import MapView from "react-native-maps"
+import Geolocation from '@react-native-community/geolocation'
 import {
   StyleSheet,
   View,
   TouchableOpacity
-} from 'react-native';
-import { Button } from 'react-native-elements';
+} from 'react-native'
+import { Button } from 'react-native-elements'
 import { Icon } from 'react-native-elements'
-import { DrawerActions } from 'react-navigation-drawer';
-import { COLORS } from '../../styles';
+import { DrawerActions } from 'react-navigation-drawer'
+import { COLORS } from '../../styles'
 
 const styles = StyleSheet.create({
   map: {
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     width : 65,
     height: 65
   }
-});
+})
 
 const Main = (props) => {
 
@@ -39,12 +39,12 @@ const Main = (props) => {
     longitude: -44.99624,
     latitudeDelta: 0.05,
     longitudeDelta: 0.05
-  });
+  })
   useEffect(() => {
     Geolocation.getCurrentPosition(info => {
       setLocation(info.coords)
-    });
-  }, []);
+    })
+  }, [])
 
   return (
     <View style={{ flex: 1 }}>
@@ -76,4 +76,4 @@ const Main = (props) => {
   )
 }
 
-export default Main;  
+export default Main 
