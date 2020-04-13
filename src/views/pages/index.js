@@ -5,6 +5,8 @@ import Login from './Login'
 import Main from './Main'
 import NewRequest from './NewRequest'
 import RequestList from './RequestList'
+import NewAddress from './NewAddress'
+import Adresses from './Adresses'
 
 export {
   Distributors,
@@ -13,6 +15,8 @@ export {
   Login,
   Main,
   NewRequest,
-  RequestList
+  RequestList,
+  NewAddress,
+  Adresses
 }
 

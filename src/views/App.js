@@ -12,7 +12,9 @@ import {
   NewRequest,
   EditUser,
   Distributors,
-  FinishRequest
+  FinishRequest,
+  NewAddress,
+  Adresses
 } from './pages'
 
 import { createAppContainer } from 'react-navigation'
@@ -20,8 +22,6 @@ import { createDrawerNavigator } from 'react-navigation-drawer'
 import DrawerContent from './components/DrawerContent'
 import { Icon } from 'react-native-elements'
 import { COLORS } from '../styles'
-import NewAdress from './pages/NewAdress'
-import Adressess from './pages/Adressess'
 
 const MainNavigator = createDrawerNavigator({
   Home : { screen : Main, navigationOptions: () => ({ drawerLabel: () => null }) },
@@ -29,9 +29,9 @@ const MainNavigator = createDrawerNavigator({
   RequestList : { screen : RequestList, navigationOptions: () => ({ title : 'Meus pedidos', drawerIcon : <Icon type="material" name="list" size={20} color={COLORS.PRIMARY} /> }) },
   Distributors : { screen : Distributors, navigationOptions: () => ({ title : 'Encontrar distribuidor', drawerIcon : <Icon type="font-awesome" name="search" size={20} color={COLORS.PRIMARY} /> }) },
   EditUser : { screen : EditUser, navigationOptions: () => ({ title : 'Meus dados', drawerIcon : <Icon type="font-awesome" name="address-card-o" size={20} color={COLORS.PRIMARY} /> }) },
+  Adresses: { screen : Adresses, navigationOptions: () => ({ title : 'Endereços', drawerIcon : <Icon type="font-awesome" name="address-card-o" size={20} color={COLORS.PRIMARY} /> })},
   FinishRequest : { screen : FinishRequest, navigationOptions: () => ({ drawerLabel: () => null }) },
-  NewAddress: { screen : NewAdress, navigationOptions: () => ({ title : 'Endereço', drawerIcon : <Icon type="font-awesome" name="address-card-o" size={20} color={COLORS.PRIMARY} /> })},
-  Addresses: { screen : Adressess, navigationOptions: () => ({ title : 'Endereços', drawerIcon : <Icon type="font-awesome" name="address-card-o" size={20} color={COLORS.PRIMARY} /> })}
+  NewAddress: { screen : NewAddress, navigationOptions: () => ({ drawerLabel: () => null }) }
 }, {
   contentComponent : DrawerContent,
   backBehavior : 'history'

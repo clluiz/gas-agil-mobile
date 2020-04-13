@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   },
   finishButton: {
     height: 50,
-    width: 150,
+    width: 300,
     backgroundColor: COLORS.CONFIRM
   },
   paymentMethod: {

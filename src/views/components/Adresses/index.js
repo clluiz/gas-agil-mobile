@@ -37,7 +37,7 @@ const Address = () => {
 
           <View 
             flexDirection="row"
-            justifyContent="space-around"
+            justifyContent="space-between"
             paddingHorizontal={0}
           >
             <TextInput
