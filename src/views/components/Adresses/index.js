@@ -42,7 +42,7 @@ const Address = () => {
           >
             <TextInput
               style={{ flex: 0.7}}
-              placeholder="Rua"
+              placeholder="Logradouro"
             />
 
             <TextInput
