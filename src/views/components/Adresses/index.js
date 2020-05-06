@@ -51,7 +51,6 @@ const Address = () => {
             />
           </View>
 
-
           <TextInput
             placeholder="Bairro"
           />

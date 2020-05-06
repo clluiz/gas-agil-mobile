@@ -14,7 +14,7 @@ import { COLORS } from '../../styles'
 const styles = StyleSheet.create({
   button: {
     width: 300,
-    backgroundColor: COLORS.CONFIRM
+    backgroundColor: COLORS.PRIMARY
   }
 })
 
