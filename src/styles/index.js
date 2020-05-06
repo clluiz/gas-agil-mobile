@@ -2,7 +2,7 @@ export const COLORS = {
   PRIMARY : '#34A8A8',
   SECONDARY : '#501DA3',
   GRAY : '#BCBCBC',
-  LIGHT_GRAY : '#DEDEDE',
+  LIGHT_GRAY : '#EFEFEF',
   DARK_GRAY: '#666666',
   WHITE : '#FFFFFF',
   SUCCESS : '#99C24D',
