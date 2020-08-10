@@ -1,8 +1,13 @@
 Criação das Pages:
 
-- Cadastro/alteração de dados cliente;
-    Nome; Telefone; E-mail; Endereço
-- Login;
 - Busca por distribuidores;
+    - Nome
+    - Telefone
+    - CNPJ
+    - Distância
+    - Avaliação
 - Lista de pedidos;
+    - Status (Pendente, Finalizado, Cancelado)
+- Login;
+- Recuperar senha;
 
