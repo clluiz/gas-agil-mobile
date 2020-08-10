@@ -8,7 +8,7 @@ import {
 import PageHeader from '../components/PageHeader'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import NumericStepper from '../components/NumericStepper'
-import { COLORS } from '../../styles'
+import { COLORS } from '../styles'
 import {
   Button
 } from 'react-native-elements'

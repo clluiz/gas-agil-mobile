@@ -9,7 +9,7 @@ import {
   Button
 } from 'react-native-elements'
 import PageHeader from '../components/PageHeader'
-import { COLORS } from '../../styles'
+import { COLORS } from '../styles'
 import {
   ButtonGroup
 } from 'react-native-elements'

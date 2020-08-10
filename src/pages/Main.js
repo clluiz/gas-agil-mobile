@@ -9,7 +9,7 @@ import {
 import { Button } from 'react-native-elements'
 import { Icon } from 'react-native-elements'
 import { DrawerActions } from 'react-navigation-drawer'
-import { COLORS } from '../../styles'
+import { COLORS } from '../styles'
 
 const styles = StyleSheet.create({
   map: {

@@ -9,7 +9,7 @@ import {
 import PageHeader from '../components/PageHeader'
 import Address from '../components/Adresses'
 import KeyboardShift from '../components/KeyboardShift'
-import { COLORS } from '../../styles'
+import { COLORS } from '../styles'
 
 const styles = StyleSheet.create({
   button: {

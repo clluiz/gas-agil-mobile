@@ -21,7 +21,7 @@ import { createAppContainer } from 'react-navigation'
 import { createDrawerNavigator } from 'react-navigation-drawer'
 import DrawerContent from './components/DrawerContent'
 import { Icon } from 'react-native-elements'
-import { COLORS } from '../styles'
+import { COLORS } from './styles'
 
 const MainNavigator = createDrawerNavigator({
   Home : { screen : Main, navigationOptions: () => ({ drawerLabel: () => null }) },

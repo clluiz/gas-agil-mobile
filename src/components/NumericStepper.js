@@ -8,7 +8,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import {
   Button
 } from 'react-native-elements'
-import { COLORS } from '../../styles'
+import { COLORS } from '../styles'
 
 const styles = StyleSheet.create({
   container: {

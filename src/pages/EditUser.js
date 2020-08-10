@@ -14,7 +14,7 @@ import {
 } from '../components/Inputs'
 import {
   COLORS
-} from '../../styles'
+} from '../styles'
 import {
   Button
 } from 'react-native-elements'

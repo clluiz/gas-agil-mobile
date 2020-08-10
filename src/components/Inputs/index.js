@@ -3,7 +3,7 @@ import {
   TextInput as Input,
   StyleSheet 
 } from 'react-native'
-import { COLORS } from '../../../styles'
+import { COLORS } from '../../styles'
 import TextInputMask from 'react-native-text-input-mask'
 
 const styles = StyleSheet.create({

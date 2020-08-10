@@ -17,7 +17,7 @@ import {
 } from 'react-native-elements'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import SafeAreaView from 'react-native-safe-area-view'
-import { COLORS } from '../../styles'
+import { COLORS } from '../styles'
 
 const styles = StyleSheet.create({
   pictureContainer: {
