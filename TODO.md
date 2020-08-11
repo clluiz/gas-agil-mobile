@@ -10,4 +10,5 @@ Criação das Pages:
     - Status (Pendente, Finalizado, Cancelado)
 - Login;
 - Recuperar senha;
+- Tela de cadastro;
 
